@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>Color Picker</title>
+</head>
+<style>
+.sty{
+    width: 520px;
+    height: 200PX;
+position: fixed;
+background-color:rgba(231, 222, 222, 0.2) ;
+left: 45%;
+top: 50%;
+transform: translate(-50%,-50%);
+border-radius: 30px;
+border: 1px solid black;
+}
+</style>
+<body>
+    <div class="sty">
+        <h1 style="text-align: center;">Color Picker</h1>
+  <label for="op" style="font-size: 20px; margin-left: 20px;">Choose a color:</label>
+  <select id="op" name="op" style="font-size: 20px;" onchange="color_change()">
+    <option value="select">Select</option>
+    <option value="red">Red</option>
+    <option value="blue">Blue</option>
+    <option value="green">Green</option>
+    <option value="yellow">Yellow</option>
+    <option value="pink">Pink</option>
+    <option value="brown">Brown</option>
+    <option value="orange">Orange</option>
+    <option value="aqua">Aqua</option>
+    <option value="violet">Violet</option>
+    <option value="purple">Purple</option>
+    <option value="gold">Gold</option>
+    <option value="darkgold">Dark Gold</option>
+    <option value="aquamarine">Aquamarine</option>
+    <option value="blueviolet">Blue Violet</option>
+    <option value="darksalmon">Darksalmon</option>
+  </select><br>
+
+  <h2 id="color" style="text-align: center;">COLOR</h2>
+</div>
+  <script>
+    function color_change() {
+      var select = document.getElementById("op").value;
+      var colors = document.getElementById("color");
+
+      switch (select) {
+        case 'red':
+          colors.style.color = "red";
+          break;
+        case 'blue':
+          colors.style.color = "blue";
+          break;
+        case 'green':
+          colors.style.color = "green";
+          break;
+        case 'yellow':
+          colors.style.color = "yellow";
+          break;
+        case 'pink':
+          colors.style.color = "pink";
+          break;
+        case 'brown':
+          colors.style.color = "brown";
+          break;
+        case 'orange':
+          colors.style.color = "orange";
+          break;
+        case 'aqua':
+          colors.style.color = "aqua";
+          break;
+        case 'violet':
+          colors.style.color = "violet";
+          break;
+        case 'purple':
+          colors.style.color = "purple";
+          break;
+        case 'gold':
+          colors.style.color = "gold";
+          break;
+        case 'darkgold':
+          colors.style.color = "darkgoldenrod";
+          break;
+        case 'aquamarine':
+          colors.style.color = "aquamarine";
+          break;
+        case 'blueviolet':
+          colors.style.color = "blueviolet";
+          break;
+        case 'darksalmon':
+          colors.style.color = "darksalmon";
+          break;
+        default:
+         alert("choose a color");
+             break;
+      }
+    }
+  </script>
+</body>
+</html>
